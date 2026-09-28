@@ -246,7 +246,7 @@ export default function Home() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="md:col-span-7 relative p-8 rounded-3xl border border-[#1c5c8a]/30 bg-[#0c1f3d]/40 backdrop-blur-xl hover:border-[#1c5c8a]/60 hover:bg-[#0c1f3d]/60 transition-all duration-300 group shadow-[0_15px_40px_rgba(5,11,20,0.7)] flex flex-col justify-between overflow-hidden"
+            className="md:col-span-7 relative p-6 sm:p-8 rounded-3xl border border-[#1c5c8a]/30 bg-[#0c1f3d]/40 backdrop-blur-xl hover:border-[#1c5c8a]/60 hover:bg-[#0c1f3d]/60 transition-all duration-300 group shadow-[0_15px_40px_rgba(5,11,20,0.7)] flex flex-col justify-between overflow-hidden"
           >
             <div className="absolute top-0 right-0 w-80 h-80 bg-gradient-to-br from-[#1c5c8a]/20 to-transparent blur-3xl pointer-events-none -z-10" />
 
@@ -257,7 +257,7 @@ export default function Home() {
               <span className="text-xs font-mono uppercase text-[#3a8ec4] tracking-wider font-semibold">
                 Comunicación Inmediata
               </span>
-              <h3 className="text-2xl font-bold text-white mt-1 mb-3">
+              <h3 className="text-xl sm:text-2xl font-bold text-white mt-1 mb-3">
                 Clasificación y Ruteo Inteligente (WhatsApp / Email)
               </h3>
               <p className="text-sm sm:text-base text-[#f8fafc]/75 leading-relaxed font-light max-w-xl">
@@ -266,29 +266,33 @@ export default function Home() {
             </div>
 
             {/* Interactive Simulated UI */}
-            <div className="mt-8 p-4 rounded-2xl bg-[#050b14]/70 border border-[#1c5c8a]/25 space-y-2.5">
-              <div className="flex items-center justify-between text-[11px] font-mono text-[#f8fafc]/60 border-b border-white/5 pb-2">
-                <span className="flex items-center gap-1.5">
-                  <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
-                  Ruteador Activo • Tiempo prom: 1.8s
+            <div className="mt-8 p-3 sm:p-4 rounded-2xl bg-[#050b14]/70 border border-[#1c5c8a]/25 space-y-2.5 w-full overflow-hidden">
+              <div className="flex items-center justify-between text-[11px] font-mono text-[#f8fafc]/60 border-b border-white/5 pb-2 gap-2">
+                <span className="flex items-center gap-1.5 min-w-0 truncate">
+                  <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse shrink-0" />
+                  <span className="truncate">Ruteador Activo • Tiempo prom: 1.8s</span>
                 </span>
-                <span className="text-[#3a8ec4]">0 mensajes perdidos</span>
+                <span className="text-[#3a8ec4] shrink-0 text-[10px] sm:text-[11px]">0 mensajes perdidos</span>
               </div>
-              <div className="flex items-center justify-between p-2 rounded-xl bg-[#0c1f3d]/50 text-xs">
-                <div className="flex items-center gap-2">
-                  <Bot className="w-4 h-4 text-[#3a8ec4]" />
-                  <span className="text-white truncate">"Hola, necesito presupuesto de 50 unidades urgente"</span>
+              <div className="flex items-center justify-between p-2 sm:p-2.5 rounded-xl bg-[#0c1f3d]/50 text-xs sm:text-sm gap-2 min-w-0">
+                <div className="flex items-center gap-2 min-w-0 flex-1">
+                  <Bot className="w-4 h-4 text-[#3a8ec4] shrink-0" />
+                  <span className="text-white text-xs sm:text-sm truncate">
+                    "Hola, necesito presupuesto de 50 unidades urgente"
+                  </span>
                 </div>
-                <span className="px-2 py-0.5 rounded-md bg-amber-500/20 text-amber-300 font-mono text-[10px] shrink-0">
+                <span className="px-2 py-0.5 rounded-md bg-amber-500/20 text-amber-300 font-mono text-[10px] sm:text-xs shrink-0 whitespace-nowrap">
                   Urgente → Ventas
                 </span>
               </div>
-              <div className="flex items-center justify-between p-2 rounded-xl bg-[#0c1f3d]/50 text-xs">
-                <div className="flex items-center gap-2">
-                  <Bot className="w-4 h-4 text-[#3a8ec4]" />
-                  <span className="text-white truncate">"¿Cuáles son los horarios de entrega en Santa Fe?"</span>
+              <div className="flex items-center justify-between p-2 sm:p-2.5 rounded-xl bg-[#0c1f3d]/50 text-xs sm:text-sm gap-2 min-w-0">
+                <div className="flex items-center gap-2 min-w-0 flex-1">
+                  <Bot className="w-4 h-4 text-[#3a8ec4] shrink-0" />
+                  <span className="text-white text-xs sm:text-sm truncate">
+                    "¿Cuáles son los horarios de entrega en Santa Fe?"
+                  </span>
                 </div>
-                <span className="px-2 py-0.5 rounded-md bg-[#1c5c8a]/30 text-[#f8fafc] font-mono text-[10px] shrink-0">
+                <span className="px-2 py-0.5 rounded-md bg-[#1c5c8a]/30 text-[#f8fafc] font-mono text-[10px] sm:text-xs shrink-0 whitespace-nowrap">
                   Respuesta Auto
                 </span>
               </div>
@@ -301,7 +305,7 @@ export default function Home() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.1 }}
-            className="md:col-span-5 relative p-8 rounded-3xl border border-[#1c5c8a]/30 bg-[#0c1f3d]/40 backdrop-blur-xl hover:border-[#1c5c8a]/60 hover:bg-[#0c1f3d]/60 transition-all duration-300 group shadow-[0_15px_40px_rgba(5,11,20,0.7)] flex flex-col justify-between"
+            className="md:col-span-5 relative p-6 sm:p-8 rounded-3xl border border-[#1c5c8a]/30 bg-[#0c1f3d]/40 backdrop-blur-xl hover:border-[#1c5c8a]/60 hover:bg-[#0c1f3d]/60 transition-all duration-300 group shadow-[0_15px_40px_rgba(5,11,20,0.7)] flex flex-col justify-between overflow-hidden"
           >
             <div>
               <div className="w-12 h-12 rounded-2xl bg-[#1c5c8a]/20 border border-[#1c5c8a]/40 flex items-center justify-center mb-6 text-[#3a8ec4] group-hover:scale-110 transition-transform">
@@ -319,20 +323,30 @@ export default function Home() {
             </div>
 
             {/* Sync Flow Indicator */}
-            <div className="mt-8 p-4 rounded-2xl bg-[#050b14]/70 border border-[#1c5c8a]/25 flex items-center justify-around gap-2 text-center font-mono text-xs">
-              <div className="flex flex-col items-center gap-1">
-                <span className="p-2 rounded-lg bg-[#0c1f3d] text-[#3a8ec4] border border-[#1c5c8a]/30">WhatsApp</span>
-                <span className="text-[10px] text-neutral-400">Entrada</span>
+            <div className="mt-8 p-3 sm:p-4 rounded-2xl bg-[#050b14]/70 border border-[#1c5c8a]/25 w-full overflow-hidden">
+              <div className="flex items-center justify-between text-[11px] font-mono text-[#f8fafc]/60 border-b border-white/5 pb-2 mb-3">
+                <span className="flex items-center gap-1.5 truncate">
+                  <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse shrink-0" />
+                  <span className="truncate">Sincronización Activa</span>
+                </span>
+                <span className="text-[#3a8ec4] shrink-0 flex items-center gap-1 text-[10px]">
+                  <RefreshCw className="w-3 h-3 animate-spin text-[#1c5c8a]" />
+                  <span>Bidireccional</span>
+                </span>
               </div>
-              <RefreshCw className="w-4 h-4 text-[#1c5c8a] animate-spin" />
-              <div className="flex flex-col items-center gap-1">
-                <span className="p-2 rounded-lg bg-[#0c1f3d] text-emerald-400 border border-emerald-500/30">Google Sheets</span>
-                <span className="text-[10px] text-neutral-400">Actualización</span>
-              </div>
-              <ChevronRight className="w-4 h-4 text-neutral-500" />
-              <div className="flex flex-col items-center gap-1">
-                <span className="p-2 rounded-lg bg-[#0c1f3d] text-cyan-300 border border-cyan-500/30">CRM / ERP</span>
-                <span className="text-[10px] text-neutral-400">Facturación</span>
+              <div className="grid grid-cols-3 gap-1.5 sm:gap-3 text-center font-mono">
+                <div className="flex flex-col items-center justify-center p-1.5 sm:p-2.5 rounded-xl bg-[#0c1f3d] border border-[#1c5c8a]/30 min-w-0">
+                  <span className="text-[10px] sm:text-xs font-semibold text-[#3a8ec4] truncate w-full">WhatsApp</span>
+                  <span className="text-[9px] sm:text-[10px] text-neutral-400 mt-0.5 truncate w-full">Entrada</span>
+                </div>
+                <div className="flex flex-col items-center justify-center p-1.5 sm:p-2.5 rounded-xl bg-[#0c1f3d] border border-emerald-500/30 min-w-0">
+                  <span className="text-[10px] sm:text-xs font-semibold text-emerald-400 truncate w-full">G. Sheets</span>
+                  <span className="text-[9px] sm:text-[10px] text-neutral-400 mt-0.5 truncate w-full">Actualización</span>
+                </div>
+                <div className="flex flex-col items-center justify-center p-1.5 sm:p-2.5 rounded-xl bg-[#0c1f3d] border border-cyan-500/30 min-w-0">
+                  <span className="text-[10px] sm:text-xs font-semibold text-cyan-300 truncate w-full">CRM / ERP</span>
+                  <span className="text-[9px] sm:text-[10px] text-neutral-400 mt-0.5 truncate w-full">Facturación</span>
+                </div>
               </div>
             </div>
           </motion.div>
@@ -343,7 +357,7 @@ export default function Home() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.15 }}
-            className="md:col-span-4 relative p-8 rounded-3xl border border-[#1c5c8a]/30 bg-[#0c1f3d]/40 backdrop-blur-xl hover:border-[#1c5c8a]/60 hover:bg-[#0c1f3d]/60 transition-all duration-300 group shadow-[0_15px_40px_rgba(5,11,20,0.7)] flex flex-col justify-between"
+            className="md:col-span-4 relative p-6 sm:p-8 rounded-3xl border border-[#1c5c8a]/30 bg-[#0c1f3d]/40 backdrop-blur-xl hover:border-[#1c5c8a]/60 hover:bg-[#0c1f3d]/60 transition-all duration-300 group shadow-[0_15px_40px_rgba(5,11,20,0.7)] flex flex-col justify-between overflow-hidden"
           >
             <div>
               <div className="w-12 h-12 rounded-2xl bg-[#1c5c8a]/20 border border-[#1c5c8a]/40 flex items-center justify-center mb-6 text-[#3a8ec4] group-hover:scale-110 transition-transform">
@@ -361,12 +375,12 @@ export default function Home() {
             </div>
 
             {/* Live alert tag */}
-            <div className="mt-6 p-3 rounded-xl bg-[#050b14]/70 border border-[#1c5c8a]/20 flex items-center justify-between text-xs">
-              <span className="flex items-center gap-2 text-white">
-                <TrendingUp className="w-4 h-4 text-emerald-400" />
-                Insumo Crítico
+            <div className="mt-6 p-3 rounded-xl bg-[#050b14]/70 border border-[#1c5c8a]/20 flex items-center justify-between text-xs w-full overflow-hidden gap-2">
+              <span className="flex items-center gap-2 text-white min-w-0 truncate">
+                <TrendingUp className="w-4 h-4 text-emerald-400 shrink-0" />
+                <span className="truncate">Insumo Crítico</span>
               </span>
-              <span className="text-xs font-mono text-emerald-400 bg-emerald-500/10 px-2 py-0.5 rounded border border-emerald-500/20">
+              <span className="text-[10px] sm:text-xs font-mono text-emerald-400 bg-emerald-500/10 px-2 py-0.5 rounded border border-emerald-500/20 shrink-0">
                 Alerta Telegram / WA
               </span>
             </div>
@@ -378,7 +392,7 @@ export default function Home() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="md:col-span-4 relative p-8 rounded-3xl border border-[#1c5c8a]/30 bg-[#0c1f3d]/40 backdrop-blur-xl hover:border-[#1c5c8a]/60 hover:bg-[#0c1f3d]/60 transition-all duration-300 group shadow-[0_15px_40px_rgba(5,11,20,0.7)] flex flex-col justify-between"
+            className="md:col-span-4 relative p-6 sm:p-8 rounded-3xl border border-[#1c5c8a]/30 bg-[#0c1f3d]/40 backdrop-blur-xl hover:border-[#1c5c8a]/60 hover:bg-[#0c1f3d]/60 transition-all duration-300 group shadow-[0_15px_40px_rgba(5,11,20,0.7)] flex flex-col justify-between overflow-hidden"
           >
             <div>
               <div className="w-12 h-12 rounded-2xl bg-[#1c5c8a]/20 border border-[#1c5c8a]/40 flex items-center justify-center mb-6 text-[#3a8ec4] group-hover:scale-110 transition-transform">
@@ -396,12 +410,12 @@ export default function Home() {
             </div>
 
             {/* Document preview pill */}
-            <div className="mt-6 p-3 rounded-xl bg-[#050b14]/70 border border-[#1c5c8a]/20 flex items-center justify-between text-xs">
-              <span className="flex items-center gap-2 text-white">
-                <CheckCircle2 className="w-4 h-4 text-[#3a8ec4]" />
-                Presupuesto PDF
+            <div className="mt-6 p-3 rounded-xl bg-[#050b14]/70 border border-[#1c5c8a]/20 flex items-center justify-between text-xs w-full overflow-hidden gap-2">
+              <span className="flex items-center gap-2 text-white min-w-0 truncate">
+                <CheckCircle2 className="w-4 h-4 text-[#3a8ec4] shrink-0" />
+                <span className="truncate">Presupuesto PDF</span>
               </span>
-              <span className="text-[10px] font-mono text-[#3a8ec4] bg-[#1c5c8a]/20 px-2 py-0.5 rounded">
+              <span className="text-[10px] font-mono text-[#3a8ec4] bg-[#1c5c8a]/20 px-2 py-0.5 rounded shrink-0">
                 Generado en 3 seg
               </span>
             </div>
@@ -413,7 +427,7 @@ export default function Home() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.25 }}
-            className="md:col-span-4 relative p-8 rounded-3xl border border-[#1c5c8a]/30 bg-[#0c1f3d]/40 backdrop-blur-xl hover:border-[#1c5c8a]/60 hover:bg-[#0c1f3d]/60 transition-all duration-300 group shadow-[0_15px_40px_rgba(5,11,20,0.7)] flex flex-col justify-between"
+            className="md:col-span-4 relative p-6 sm:p-8 rounded-3xl border border-[#1c5c8a]/30 bg-[#0c1f3d]/40 backdrop-blur-xl hover:border-[#1c5c8a]/60 hover:bg-[#0c1f3d]/60 transition-all duration-300 group shadow-[0_15px_40px_rgba(5,11,20,0.7)] flex flex-col justify-between overflow-hidden"
           >
             <div>
               <div className="w-12 h-12 rounded-2xl bg-[#1c5c8a]/20 border border-[#1c5c8a]/40 flex items-center justify-center mb-6 text-[#3a8ec4] group-hover:scale-110 transition-transform">
@@ -431,12 +445,12 @@ export default function Home() {
             </div>
 
             {/* KPI pill */}
-            <div className="mt-6 p-3 rounded-xl bg-[#050b14]/70 border border-[#1c5c8a]/20 flex items-center justify-between text-xs">
-              <span className="flex items-center gap-2 text-white">
-                <SlidersHorizontal className="w-4 h-4 text-[#3a8ec4]" />
-                Métricas Clave
+            <div className="mt-6 p-3 rounded-xl bg-[#050b14]/70 border border-[#1c5c8a]/20 flex items-center justify-between text-xs w-full overflow-hidden gap-2">
+              <span className="flex items-center gap-2 text-white min-w-0 truncate">
+                <SlidersHorizontal className="w-4 h-4 text-[#3a8ec4] shrink-0" />
+                <span className="truncate">Métricas Clave</span>
               </span>
-              <span className="text-[10px] font-mono text-emerald-400 bg-emerald-500/15 px-2 py-0.5 rounded">
+              <span className="text-[10px] font-mono text-emerald-400 bg-emerald-500/15 px-2 py-0.5 rounded shrink-0">
                 100% Personalizado
               </span>
             </div>
