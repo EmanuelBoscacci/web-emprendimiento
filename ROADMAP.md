@@ -38,8 +38,8 @@ Documento de visión técnica, arquitectura visual y hoja de ruta para la constr
   - Botones CTA con resplandor eléctrico `#1c5c8a` (WhatsApp y Diagnóstico Gratuito).
   - Visor 3D interactivo integrado con Spline.
 - [x] **Bento Grid de Soluciones Concretas**:
-  - Tarjeta 1 (Grande): Clasificación y ruteo inteligente (WhatsApp / Email) con simulador de triage.
-  - Tarjeta 2: Integración directa entre planillas, WhatsApp y software interno.
+  - Tarjeta 1 (Grande): Clasificación y ruteo inteligente (WhatsApp / Email) con simulador de triage responsive.
+  - Tarjeta 2: Integración directa entre planillas, WhatsApp y software interno (grid proporcional móvil).
   - Tarjeta 3: Monitoreo web y alertas automáticas de insumos/costos.
   - Tarjeta 4: Generación automática de presupuestos, remitos y reportes.
   - Tarjeta 5: Paneles y dashboards a medida para decisiones operativas.
@@ -47,6 +47,11 @@ Documento de visión técnica, arquitectura visual y hoja de ruta para la constr
   - Pilar 1: Implementación en días (&lt; 10 días).
   - Pilar 2: Recuperación real de horas (15h a 30h semanales ahorradas).
   - Pilar 3: Tecnología adaptada a tu realidad (cero fricción).
+- [x] **Sección "Metodología en 4 Pasos"**:
+  - Paso 01: Diagnóstico y Mapeo (30 minutos).
+  - Paso 02: Diseño de Solución (48 a 72 horas).
+  - Paso 03: Puesta en Marcha (&lt; 10 días a producción).
+  - Paso 04: Medición de Impacto y Acompañamiento (Soporte activo).
 - [x] **Llamado a la Acción Final (CTA Banner)**:
   - Diagnóstico gratuito de 30 minutos y botón directo a WhatsApp.
 - [x] **Modal Interactivo de Diagnóstico (`LeadModal`)**:
@@ -54,7 +59,11 @@ Documento de visión técnica, arquitectura visual y hoja de ruta para la constr
   - Animaciones fluidas de entrada y salida con Framer Motion (`AnimatePresence`).
   - Cierre por tecla Escape y clic en backdrop con bloqueo de scroll de fondo.
   - Feedback de carga y pantalla de confirmación con redirección opcional a WhatsApp.
+- [x] **Cuadro Comparativo: "Tu negocio hoy vs. Con Punto Litoral"**:
+  - Comparación visual del antes y el después en operaciones diarias (WhatsApp, planillas, cotizaciones, cobranzas y tiempo directivo).
+  - 3 tarjetas de métricas de impacto (+85% velocidad, 0 hs manuales, 15-25 hs ahorradas).
+- [x] **Sección de Preguntas Frecuentes (FAQ Accordion)**:
+  - 6 preguntas estratégicas sobre adopción de herramientas, tiempos, curva técnica, presencial/remoto y seguridad.
+  - Componente `FaqAccordion.tsx` interactivo con Framer Motion y botón de consulta directa por WhatsApp.
 - [ ] **Navbar Flotante Fija (Floating Island Navbar)**:
   - Diseño tipo isla anclada con `backdrop-blur` e indicadores de sección activa.
-- [ ] **Sección de Casos de Uso / Metodología Paso a Paso**:
-  - Detalle interactivo del proceso de consultoría (Diagnóstico &gt; Prototipo &gt; Despliegue &gt; Monitoreo).

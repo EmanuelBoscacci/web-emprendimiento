@@ -21,13 +21,20 @@ import {
   SlidersHorizontal,
   MapPin,
   Calendar,
+  Search,
+  GitBranch,
+  Rocket,
+  BarChart3,
+  XCircle,
 } from "lucide-react";
 import SplineViewer from "@/components/SplineViewer";
 import BrandLogo from "@/components/BrandLogo";
 import LeadModal from "@/components/LeadModal";
+import FaqAccordion from "@/components/FaqAccordion";
 
 // Enlaces de contacto configurables (WhatsApp y Diagnóstico)
-const WHATSAPP_NUMBER = "5493493400000"; // Reemplazar con el número oficial de Punto Litoral
+const WHATSAPP_NUMBER = "5493493506346"; // Teléfono oficial de Punto Litoral: +54 9 3493 50-6346
+const WHATSAPP_DISPLAY = "+54 9 3493 50-6346";
 const WHATSAPP_LINK = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(
   "Hola Punto Litoral! Me gustaría consultar por automatizaciones y optimización de tareas repetitivas en mi negocio."
 )}`;
@@ -70,12 +77,21 @@ export default function Home() {
             </div>
           </motion.div>
 
-          <nav className="hidden md:flex items-center gap-8 text-sm text-[#f8fafc]/70 font-medium">
+          <nav className="hidden lg:flex items-center gap-7 text-sm text-[#f8fafc]/70 font-medium">
             <a href="#soluciones" className="hover:text-white transition-colors">
               Soluciones
             </a>
             <a href="#por-que-nosotros" className="hover:text-white transition-colors">
-              ¿Por qué Punto Litoral?
+              Pilares
+            </a>
+            <a href="#metodologia" className="hover:text-white transition-colors">
+              Metodología
+            </a>
+            <a href="#comparativa" className="hover:text-white transition-colors">
+              Comparativa
+            </a>
+            <a href="#faq" className="hover:text-white transition-colors">
+              Preguntas
             </a>
             <a href="#contacto" className="hover:text-white transition-colors">
               Contacto
@@ -583,6 +599,560 @@ export default function Home() {
         </div>
       </section>
 
+      {/* SECTION: Metodología en 4 Pasos */}
+      <section
+        id="metodologia"
+        className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 border-t border-[#0c1f3d]/80"
+      >
+        <div className="text-center max-w-3xl mx-auto mb-16">
+          <motion.span
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true }}
+            className="text-xs font-mono uppercase tracking-widest text-[#3a8ec4] bg-[#0c1f3d]/60 border border-[#1c5c8a]/30 px-3.5 py-1.5 rounded-full inline-block mb-3"
+          >
+            Metodología en 4 Pasos
+          </motion.span>
+          <motion.h2
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="text-3xl sm:text-5xl font-bold tracking-tight text-white"
+          >
+            De la pérdida de tiempo a la automatización
+          </motion.h2>
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.1 }}
+            className="text-[#f8fafc]/75 text-base sm:text-lg mt-4 font-light"
+          >
+            Un método ágil, transparente y sin frenar tu operatoria diaria para empezar a recuperar horas en menos de 10 días.
+          </motion.p>
+        </div>
+
+        {/* 4 Steps Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 relative">
+          {/* Step 1 */}
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="relative p-6 sm:p-7 rounded-3xl border border-[#1c5c8a]/30 bg-[#0c1f3d]/40 backdrop-blur-xl hover:border-[#1c5c8a]/60 hover:bg-[#0c1f3d]/60 transition-all duration-300 group shadow-[0_15px_40px_rgba(5,11,20,0.7)] flex flex-col justify-between overflow-hidden"
+          >
+            <div>
+              {/* Step indicator header */}
+              <div className="flex items-center justify-between mb-5">
+                <span className="font-mono text-2xl font-bold text-[#3a8ec4] group-hover:text-white transition-colors">
+                  01
+                </span>
+                <span className="text-[10px] font-mono uppercase tracking-wider text-[#3a8ec4] bg-[#1c5c8a]/20 border border-[#1c5c8a]/30 px-2.5 py-0.5 rounded-full">
+                  30 Minutos
+                </span>
+              </div>
+
+              <div className="w-11 h-11 rounded-xl bg-[#1c5c8a]/20 border border-[#1c5c8a]/40 flex items-center justify-center mb-4 text-[#3a8ec4] group-hover:scale-110 transition-transform">
+                <Search className="w-5 h-5" />
+              </div>
+
+              <h3 className="text-xl font-bold text-white mb-2">
+                Diagnóstico y Mapeo
+              </h3>
+
+              <p className="text-sm text-[#f8fafc]/75 leading-relaxed font-light">
+                Mapeamos los flujos de trabajo de tu equipo para identificar qué tareas manuales consumen más horas y generan errores en tu empresa.
+              </p>
+            </div>
+
+            <div className="mt-6 pt-4 border-t border-white/5 flex items-center gap-2 text-xs font-mono text-[#3a8ec4]">
+              <CheckCircle2 className="w-4 h-4 text-emerald-400 shrink-0" />
+              <span className="text-[#f8fafc]/80 text-[11px] leading-tight">
+                Mapa de 3 cuellos de botella clave
+              </span>
+            </div>
+          </motion.div>
+
+          {/* Step 2 */}
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.1 }}
+            className="relative p-6 sm:p-7 rounded-3xl border border-[#1c5c8a]/30 bg-[#0c1f3d]/40 backdrop-blur-xl hover:border-[#1c5c8a]/60 hover:bg-[#0c1f3d]/60 transition-all duration-300 group shadow-[0_15px_40px_rgba(5,11,20,0.7)] flex flex-col justify-between overflow-hidden"
+          >
+            <div>
+              <div className="flex items-center justify-between mb-5">
+                <span className="font-mono text-2xl font-bold text-[#3a8ec4] group-hover:text-white transition-colors">
+                  02
+                </span>
+                <span className="text-[10px] font-mono uppercase tracking-wider text-[#3a8ec4] bg-[#1c5c8a]/20 border border-[#1c5c8a]/30 px-2.5 py-0.5 rounded-full">
+                  48 a 72 Horas
+                </span>
+              </div>
+
+              <div className="w-11 h-11 rounded-xl bg-[#1c5c8a]/20 border border-[#1c5c8a]/40 flex items-center justify-center mb-4 text-[#3a8ec4] group-hover:scale-110 transition-transform">
+                <GitBranch className="w-5 h-5" />
+              </div>
+
+              <h3 className="text-xl font-bold text-white mb-2">
+                Diseño de Solución
+              </h3>
+
+              <p className="text-sm text-[#f8fafc]/75 leading-relaxed font-light">
+                Diseñamos la automatización más simple, económica y efectiva, adaptándonos a las herramientas que tu equipo ya domina (WhatsApp, Excel, tu ERP).
+              </p>
+            </div>
+
+            <div className="mt-6 pt-4 border-t border-white/5 flex items-center gap-2 text-xs font-mono text-[#3a8ec4]">
+              <CheckCircle2 className="w-4 h-4 text-emerald-400 shrink-0" />
+              <span className="text-[#f8fafc]/80 text-[11px] leading-tight">
+                Plan de integración sin cambio de software
+              </span>
+            </div>
+          </motion.div>
+
+          {/* Step 3 */}
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            className="relative p-6 sm:p-7 rounded-3xl border border-[#1c5c8a]/30 bg-[#0c1f3d]/40 backdrop-blur-xl hover:border-[#1c5c8a]/60 hover:bg-[#0c1f3d]/60 transition-all duration-300 group shadow-[0_15px_40px_rgba(5,11,20,0.7)] flex flex-col justify-between overflow-hidden"
+          >
+            <div>
+              <div className="flex items-center justify-between mb-5">
+                <span className="font-mono text-2xl font-bold text-[#3a8ec4] group-hover:text-white transition-colors">
+                  03
+                </span>
+                <span className="text-[10px] font-mono uppercase tracking-wider text-emerald-400 bg-emerald-500/15 border border-emerald-500/30 px-2.5 py-0.5 rounded-full">
+                  &lt; 10 Días
+                </span>
+              </div>
+
+              <div className="w-11 h-11 rounded-xl bg-[#1c5c8a]/20 border border-[#1c5c8a]/40 flex items-center justify-center mb-4 text-[#3a8ec4] group-hover:scale-110 transition-transform">
+                <Rocket className="w-5 h-5" />
+              </div>
+
+              <h3 className="text-xl font-bold text-white mb-2">
+                Puesta en Marcha
+              </h3>
+
+              <p className="text-sm text-[#f8fafc]/75 leading-relaxed font-light">
+                Construimos, probamos y conectamos las integraciones en tu entorno operativo real, garantizando continuidad total sin frenar tu negocio.
+              </p>
+            </div>
+
+            <div className="mt-6 pt-4 border-t border-white/5 flex items-center gap-2 text-xs font-mono text-[#3a8ec4]">
+              <CheckCircle2 className="w-4 h-4 text-emerald-400 shrink-0" />
+              <span className="text-[#f8fafc]/80 text-[11px] leading-tight">
+                Automatización operativa en producción
+              </span>
+            </div>
+          </motion.div>
+
+          {/* Step 4 */}
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.3 }}
+            className="relative p-6 sm:p-7 rounded-3xl border border-[#1c5c8a]/30 bg-[#0c1f3d]/40 backdrop-blur-xl hover:border-[#1c5c8a]/60 hover:bg-[#0c1f3d]/60 transition-all duration-300 group shadow-[0_15px_40px_rgba(5,11,20,0.7)] flex flex-col justify-between overflow-hidden"
+          >
+            <div>
+              <div className="flex items-center justify-between mb-5">
+                <span className="font-mono text-2xl font-bold text-[#3a8ec4] group-hover:text-white transition-colors">
+                  04
+                </span>
+                <span className="text-[10px] font-mono uppercase tracking-wider text-[#3a8ec4] bg-[#1c5c8a]/20 border border-[#1c5c8a]/30 px-2.5 py-0.5 rounded-full">
+                  Soporte Activo
+                </span>
+              </div>
+
+              <div className="w-11 h-11 rounded-xl bg-[#1c5c8a]/20 border border-[#1c5c8a]/40 flex items-center justify-center mb-4 text-[#3a8ec4] group-hover:scale-110 transition-transform">
+                <BarChart3 className="w-5 h-5" />
+              </div>
+
+              <h3 className="text-xl font-bold text-white mb-2">
+                Medición y Acompañamiento
+              </h3>
+
+              <p className="text-sm text-[#f8fafc]/75 leading-relaxed font-light">
+                Auditamos las horas netas devueltas a tu equipo, realizamos ajustes finos y te brindamos soporte preventivo para que todo funcione 24/7 sin fallas.
+              </p>
+            </div>
+
+            <div className="mt-6 pt-4 border-t border-white/5 flex items-center gap-2 text-xs font-mono text-[#3a8ec4]">
+              <CheckCircle2 className="w-4 h-4 text-emerald-400 shrink-0" />
+              <span className="text-[#f8fafc]/80 text-[11px] leading-tight">
+                Reporte de horas ahorradas y soporte continuo
+              </span>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* SECTION: Comparativa "Tu negocio hoy vs. Con Punto Litoral" */}
+      <section
+        id="comparativa"
+        className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 border-t border-[#0c1f3d]/80"
+      >
+        <div className="text-center max-w-3xl mx-auto mb-16">
+          <motion.span
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true }}
+            className="text-xs font-mono uppercase tracking-widest text-[#3a8ec4] bg-[#0c1f3d]/60 border border-[#1c5c8a]/30 px-3.5 py-1.5 rounded-full inline-block mb-3"
+          >
+            Transformación Operativa
+          </motion.span>
+          <motion.h2
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="text-3xl sm:text-5xl font-bold tracking-tight text-white"
+          >
+            Tu negocio hoy vs. Con Punto Litoral
+          </motion.h2>
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.1 }}
+            className="text-[#f8fafc]/75 text-base sm:text-lg mt-4 font-light"
+          >
+            La diferencia real entre operar con cuellos de botella manuales o con un sistema ágil, conectado y automático.
+          </motion.p>
+        </div>
+
+        {/* 2-Column Comparison Grid */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-stretch">
+          {/* Columna Izquierda: Tu Negocio Hoy */}
+          <motion.div
+            initial={{ opacity: 0, x: -30 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="relative p-7 sm:p-9 rounded-3xl border border-rose-500/20 bg-[#0c1f3d]/25 backdrop-blur-xl flex flex-col justify-between overflow-hidden shadow-[0_10px_30px_rgba(244,63,94,0.05)]"
+          >
+            <div className="absolute top-0 right-0 w-48 h-48 bg-rose-500/5 blur-[80px] pointer-events-none -z-10" />
+
+            <div>
+              <div className="flex items-center justify-between pb-6 mb-6 border-b border-rose-500/15">
+                <div>
+                  <span className="text-[11px] font-mono uppercase tracking-widest text-rose-400 font-semibold bg-rose-500/10 border border-rose-500/20 px-3 py-1 rounded-full">
+                    Operación Tradicional
+                  </span>
+                  <h3 className="text-2xl font-bold text-white mt-3">
+                    Tu Negocio Hoy
+                  </h3>
+                  <p className="text-xs sm:text-sm text-[#f8fafc]/60 mt-1 font-light">
+                    Tareas manuales, cuellos de botella y desorden operativo.
+                  </p>
+                </div>
+              </div>
+
+              <div className="space-y-5">
+                {/* Item 1 */}
+                <div className="flex items-start gap-3.5">
+                  <XCircle className="w-5 h-5 text-rose-400 shrink-0 mt-0.5" />
+                  <div>
+                    <h4 className="text-sm sm:text-base font-semibold text-rose-200/90">
+                      WhatsApp y correos saturados
+                    </h4>
+                    <p className="text-xs sm:text-sm text-[#f8fafc]/65 font-light leading-relaxed mt-0.5">
+                      Mensajes que tardan horas en responderse. Tu equipo responde la misma consulta 30 veces al día a mano y pierde clientes por demora.
+                    </p>
+                  </div>
+                </div>
+
+                {/* Item 2 */}
+                <div className="flex items-start gap-3.5">
+                  <XCircle className="w-5 h-5 text-rose-400 shrink-0 mt-0.5" />
+                  <div>
+                    <h4 className="text-sm sm:text-base font-semibold text-rose-200/90">
+                      Doble carga en planillas y sistemas
+                    </h4>
+                    <p className="text-xs sm:text-sm text-[#f8fafc]/65 font-light leading-relaxed mt-0.5">
+                      Copiar y pegar datos entre Excel, WhatsApp y tu software de facturación. Errores humanos de tipeo y números que nunca coinciden.
+                    </p>
+                  </div>
+                </div>
+
+                {/* Item 3 */}
+                <div className="flex items-start gap-3.5">
+                  <XCircle className="w-5 h-5 text-rose-400 shrink-0 mt-0.5" />
+                  <div>
+                    <h4 className="text-sm sm:text-base font-semibold text-rose-200/90">
+                      Presupuestos y remitos demorados
+                    </h4>
+                    <p className="text-xs sm:text-sm text-[#f8fafc]/65 font-light leading-relaxed mt-0.5">
+                      Horas invertidas en armar cotizaciones manualmente en Word o Excel. Para cuando enviás la propuesta, el prospecto ya cotizó en otro lado.
+                    </p>
+                  </div>
+                </div>
+
+                {/* Item 4 */}
+                <div className="flex items-start gap-3.5">
+                  <XCircle className="w-5 h-5 text-rose-400 shrink-0 mt-0.5" />
+                  <div>
+                    <h4 className="text-sm sm:text-base font-semibold text-rose-200/90">
+                      Cobranzas y vencimientos olvidados
+                    </h4>
+                    <p className="text-xs sm:text-sm text-[#f8fafc]/65 font-light leading-relaxed mt-0.5">
+                      Facturas impagas acumuladas porque nadie tiene tiempo de revisar diariamente los vencimientos ni mandar mensajes de cobro.
+                    </p>
+                  </div>
+                </div>
+
+                {/* Item 5 */}
+                <div className="flex items-start gap-3.5">
+                  <XCircle className="w-5 h-5 text-rose-400 shrink-0 mt-0.5" />
+                  <div>
+                    <h4 className="text-sm sm:text-base font-semibold text-rose-200/90">
+                      Decisiones a ciegas y tiempo directivo atrapado
+                    </h4>
+                    <p className="text-xs sm:text-sm text-[#f8fafc]/65 font-light leading-relaxed mt-0.5">
+                      Los dueños y encargados pierden más de 20 horas a la semana resolviendo urgencias mecánicas en lugar de hacer crecer la empresa.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div className="mt-8 pt-5 border-t border-rose-500/15 flex items-center justify-between text-xs font-mono text-rose-300/80">
+              <span>Resultado operativo</span>
+              <span className="font-semibold text-rose-400">Pérdida continua de tiempo y ventas</span>
+            </div>
+          </motion.div>
+
+          {/* Columna Derecha: Con Punto Litoral */}
+          <motion.div
+            initial={{ opacity: 0, x: 30 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="relative p-7 sm:p-9 rounded-3xl border border-[#1c5c8a]/60 bg-[#0c1f3d]/60 backdrop-blur-xl flex flex-col justify-between overflow-hidden shadow-[0_0_50px_rgba(28,92,138,0.25)] ring-1 ring-[#1c5c8a]/40"
+          >
+            <div className="absolute top-0 right-0 w-64 h-64 bg-[#1c5c8a]/15 blur-[90px] pointer-events-none -z-10" />
+
+            <div>
+              <div className="flex items-center justify-between pb-6 mb-6 border-b border-[#1c5c8a]/30">
+                <div>
+                  <span className="text-[11px] font-mono uppercase tracking-widest text-[#3a8ec4] font-semibold bg-[#1c5c8a]/20 border border-[#1c5c8a]/40 px-3 py-1 rounded-full flex items-center gap-1.5 w-fit">
+                    <Sparkles className="w-3 h-3 text-[#3a8ec4]" />
+                    <span>Automatización Punto Litoral</span>
+                  </span>
+                  <h3 className="text-2xl font-bold text-white mt-3">
+                    Con Punto Litoral
+                  </h3>
+                  <p className="text-xs sm:text-sm text-[#f8fafc]/75 mt-1 font-light">
+                    Sistemas sincronizados, respuesta inmediata y horas recuperadas.
+                  </p>
+                </div>
+              </div>
+
+              <div className="space-y-5">
+                {/* Item 1 */}
+                <div className="flex items-start gap-3.5">
+                  <CheckCircle2 className="w-5 h-5 text-emerald-400 shrink-0 mt-0.5" />
+                  <div>
+                    <h4 className="text-sm sm:text-base font-semibold text-white">
+                      Atención inmediata 24/7 y triage con IA
+                    </h4>
+                    <p className="text-xs sm:text-sm text-[#f8fafc]/75 font-light leading-relaxed mt-0.5">
+                      Respuestas automáticas inteligentes a consultas frecuentes. Si requiere un asesor humano, se rutea al instante con el contexto completo.
+                    </p>
+                  </div>
+                </div>
+
+                {/* Item 2 */}
+                <div className="flex items-start gap-3.5">
+                  <CheckCircle2 className="w-5 h-5 text-emerald-400 shrink-0 mt-0.5" />
+                  <div>
+                    <h4 className="text-sm sm:text-base font-semibold text-white">
+                      Sincronización automática de datos
+                    </h4>
+                    <p className="text-xs sm:text-sm text-[#f8fafc]/75 font-light leading-relaxed mt-0.5">
+                      De WhatsApp o formularios web directo a tu Excel, Google Sheets o ERP sin tocar un solo botón. Cero errores de transcripción.
+                    </p>
+                  </div>
+                </div>
+
+                {/* Item 3 */}
+                <div className="flex items-start gap-3.5">
+                  <CheckCircle2 className="w-5 h-5 text-emerald-400 shrink-0 mt-0.5" />
+                  <div>
+                    <h4 className="text-sm sm:text-base font-semibold text-white">
+                      Cotizaciones y remitos en 10 segundos
+                    </h4>
+                    <p className="text-xs sm:text-sm text-[#f8fafc]/75 font-light leading-relaxed mt-0.5">
+                      Generación automática de presupuestos en PDF con lista de precios actualizada y envío inmediato cuando el cliente tiene interés de compra.
+                    </p>
+                  </div>
+                </div>
+
+                {/* Item 4 */}
+                <div className="flex items-start gap-3.5">
+                  <CheckCircle2 className="w-5 h-5 text-emerald-400 shrink-0 mt-0.5" />
+                  <div>
+                    <h4 className="text-sm sm:text-base font-semibold text-white">
+                      Cobranzas y vencimientos automatizados
+                    </h4>
+                    <p className="text-xs sm:text-sm text-[#f8fafc]/75 font-light leading-relaxed mt-0.5">
+                      Recordatorios programados y personalizados por WhatsApp antes del vencimiento. Reducción directa de la cartera morosa sin fricción.
+                    </p>
+                  </div>
+                </div>
+
+                {/* Item 5 */}
+                <div className="flex items-start gap-3.5">
+                  <CheckCircle2 className="w-5 h-5 text-emerald-400 shrink-0 mt-0.5" />
+                  <div>
+                    <h4 className="text-sm sm:text-base font-semibold text-white">
+                      15 a 25 horas semanales devueltas a la dirección
+                    </h4>
+                    <p className="text-xs sm:text-sm text-[#f8fafc]/75 font-light leading-relaxed mt-0.5">
+                      Métricas clave en tu celular en tiempo real y tiempo neto recuperado para cerrar contratos, liderar el equipo y planificar el futuro.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div className="mt-8 pt-5 border-t border-[#1c5c8a]/30 flex items-center justify-between text-xs font-mono text-emerald-400">
+              <span className="text-[#f8fafc]/70">Resultado operativo</span>
+              <span className="font-semibold">+20 hs semanales de productividad real</span>
+            </div>
+          </motion.div>
+        </div>
+
+        {/* 3 Metric Highlight Cards */}
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 mt-12">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5 }}
+            className="p-6 rounded-2xl border border-[#1c5c8a]/30 bg-[#0c1f3d]/40 backdrop-blur-xl text-center"
+          >
+            <div className="text-3xl sm:text-4xl font-mono font-bold text-[#3a8ec4] mb-1">
+              +85%
+            </div>
+            <div className="text-sm font-semibold text-white mb-1">
+              Velocidad de Respuesta
+            </div>
+            <div className="text-xs text-[#f8fafc]/60 font-light">
+              Tus prospectos y clientes atendidos en segundos sin demoras.
+            </div>
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5, delay: 0.1 }}
+            className="p-6 rounded-2xl border border-[#1c5c8a]/30 bg-[#0c1f3d]/40 backdrop-blur-xl text-center"
+          >
+            <div className="text-3xl sm:text-4xl font-mono font-bold text-emerald-400 mb-1">
+              0 hs
+            </div>
+            <div className="text-sm font-semibold text-white mb-1">
+              Carga Manual de Planillas
+            </div>
+            <div className="text-xs text-[#f8fafc]/60 font-light">
+              Eliminación total del copy-paste entre WhatsApp y tus sistemas.
+            </div>
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5, delay: 0.2 }}
+            className="p-6 rounded-2xl border border-[#1c5c8a]/30 bg-[#0c1f3d]/40 backdrop-blur-xl text-center"
+          >
+            <div className="text-3xl sm:text-4xl font-mono font-bold text-[#3a8ec4] mb-1">
+              15 a 25 hs
+            </div>
+            <div className="text-sm font-semibold text-white mb-1">
+              Ahorro Semanal de Tiempo
+            </div>
+            <div className="text-xs text-[#f8fafc]/60 font-light">
+              Horas liberadas para que tu equipo se concentre en vender.
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* SECTION: Preguntas Frecuentes (FAQ) */}
+      <section
+        id="faq"
+        className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 border-t border-[#0c1f3d]/80"
+      >
+        <div className="text-center max-w-3xl mx-auto mb-16">
+          <motion.span
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true }}
+            className="text-xs font-mono uppercase tracking-widest text-[#3a8ec4] bg-[#0c1f3d]/60 border border-[#1c5c8a]/30 px-3.5 py-1.5 rounded-full inline-block mb-3"
+          >
+            Dudas Habituales
+          </motion.span>
+          <motion.h2
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="text-3xl sm:text-5xl font-bold tracking-tight text-white"
+          >
+            Preguntas Frecuentes
+          </motion.h2>
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.1 }}
+            className="text-[#f8fafc]/75 text-base sm:text-lg mt-4 font-light"
+          >
+            Todo lo que necesitás saber antes de dar el paso hacia la automatización de tu negocio.
+          </motion.p>
+        </div>
+
+        {/* Faq Accordion component */}
+        <FaqAccordion />
+
+        {/* Support helper card */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="mt-12 p-6 sm:p-8 rounded-3xl border border-[#1c5c8a]/30 bg-[#0c1f3d]/30 backdrop-blur-xl text-center max-w-2xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-6"
+        >
+          <div className="text-left">
+            <h4 className="text-lg font-bold text-white">
+              ¿Tenés una consulta específica sobre tu negocio?
+            </h4>
+            <p className="text-xs sm:text-sm text-[#f8fafc]/70 mt-1 font-light">
+              Analizamos tu caso puntual y te decimos exactamente qué se puede automatizar.
+            </p>
+          </div>
+
+          <a
+            href={WHATSAPP_LINK}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="shrink-0 px-5 py-2.5 rounded-full border border-[#1c5c8a]/50 bg-[#1c5c8a]/20 hover:bg-[#1c5c8a]/40 text-xs font-mono uppercase tracking-wider text-white transition-all shadow-[0_0_20px_rgba(28,92,138,0.3)] flex items-center gap-2 cursor-pointer"
+          >
+            <MessageSquare className="w-3.5 h-3.5 text-[#3a8ec4]" />
+            <span>Consultar por WhatsApp</span>
+          </a>
+        </motion.div>
+      </section>
+
       {/* SECTION 4: Final High-Impact CTA */}
       <section
         id="contacto"
@@ -654,9 +1224,22 @@ export default function Home() {
             "No vendemos tecnología. Vendemos tiempo, eficiencia y mejores decisiones."
           </p>
 
-          <div className="text-xs text-[#f8fafc]/50 font-mono">
+          <div className="text-xs text-[#f8fafc]/50 font-mono space-y-1">
             <p>Sunchales y Santa Fe de la Vera Cruz</p>
-            <p className="mt-1">Punto Litoral © {new Date().getFullYear()}</p>
+            <p>
+              WhatsApp:{" "}
+              <a
+                href={WHATSAPP_LINK}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-[#3a8ec4] hover:underline"
+              >
+                {WHATSAPP_DISPLAY}
+              </a>
+            </p>
+            <p className="mt-1 text-[11px] text-[#f8fafc]/40">
+              Punto Litoral © {new Date().getFullYear()}
+            </p>
           </div>
         </div>
       </footer>

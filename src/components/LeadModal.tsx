@@ -82,7 +82,7 @@ export default function LeadModal({ isOpen, onClose }: LeadModalProps) {
     const text = `Hola Punto Litoral! Soy ${formData.nombre} de ${formData.empresa}. Acabo de solicitar el Diagnóstico Gratuito para optimizar tareas repetitivas.${
       formData.cuelloDeBotella ? ` Mi cuello de botella principal es: ${formData.cuelloDeBotella}` : ""
     }`;
-    return `https://wa.me/5493493400000?text=${encodeURIComponent(text)}`;
+    return `https://wa.me/5493493506346?text=${encodeURIComponent(text)}`;
   };
 
   return (

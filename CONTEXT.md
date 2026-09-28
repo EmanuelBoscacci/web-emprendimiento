@@ -13,6 +13,7 @@ Documento de contexto rector, propuesta de valor y catálogo de soluciones para 
   - **Lienzo de Fondo**: `#050b14`
   - **Tipografía / Texto**: `#f8fafc` (blanco roto de alto contraste)
 - **Ubicación / Cobertura**: Sunchales y Santa Fe de la Vera Cruz (modalidad presencial y remota).
+- **Teléfono / WhatsApp Oficial**: `+54 9 3493 50-6346` (enlace wa.me: `5493493506346`).
 
 ---
 
