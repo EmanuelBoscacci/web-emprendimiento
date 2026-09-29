@@ -27,7 +27,7 @@ import {
   BarChart3,
   XCircle,
 } from "lucide-react";
-import SplineViewer from "@/components/SplineViewer";
+import ProductShowcase from "@/components/ProductShowcase";
 import BrandLogo from "@/components/BrandLogo";
 import LeadModal from "@/components/LeadModal";
 import FaqAccordion from "@/components/FaqAccordion";
@@ -152,20 +152,19 @@ export default function Home() {
           </motion.a>
         </motion.div>
 
-        {/* Interactive 3D Spatial Canvas Prepared for Spline */}
-        <motion.div
-          id="spline-viewport"
-          initial={{ opacity: 0, y: 50, scale: 0.97 }}
-          animate={{ opacity: 1, y: 0, scale: 1 }}
-          transition={{ duration: 1, delay: 0.6, ease: [0.16, 1, 0.3, 1] }}
-          className="relative w-full max-w-5xl mt-16 sm:mt-20"
-        >
-          {/* Ambient backlight behind the 3D frame */}
-          <div className="absolute -inset-3 bg-gradient-to-r from-[#1c5c8a]/35 via-[#3a8ec4]/20 to-[#0c1f3d]/45 rounded-3xl blur-2xl opacity-75 pointer-events-none -z-10" />
+        {/* Showcase Header Subtitle */}
+        <div className="mt-16 sm:mt-20 text-center max-w-2xl mx-auto">
+          <span className="text-xs font-mono uppercase tracking-widest text-[#3a8ec4] bg-[#0c1f3d]/60 border border-[#1c5c8a]/30 px-3.5 py-1.5 rounded-full inline-flex items-center gap-1.5 mb-2">
+            <Sparkles className="w-3.5 h-3.5 text-[#3a8ec4]" />
+            <span>Caso de éxito real</span>
+          </span>
+          <p className="text-xs sm:text-sm text-[#f8fafc]/75 font-light leading-relaxed">
+            Sistema integral de turnos y automatización de avisos desarrollado para profesionales
+          </p>
+        </div>
 
-          {/* Spline 3D Viewport Component */}
-          <SplineViewer sceneUrl="https://prod.spline.design/kZDDjO5HuC9GJUM2/scene.splinecode" />
-        </motion.div>
+        {/* Interactive 3D Tilt Product Showcase (MiPunto Profesional) */}
+        <ProductShowcase />
       </main>
 
       {/* SECTION 2: Bento Grid of Solutions */}
