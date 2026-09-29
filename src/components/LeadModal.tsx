@@ -66,16 +66,30 @@ export default function LeadModal({ isOpen, onClose }: LeadModalProps) {
     }
   }, [isOpen]);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!formData.nombre || !formData.empresa || !formData.whatsapp) return;
 
     setStatus("submitting");
 
-    // Simulación de envío con feedback visual de alta respuesta
-    setTimeout(() => {
+    try {
+      const response = await fetch("/api/lead", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
+
+      if (!response.ok) {
+        const errorData = await response.json().catch(() => ({}));
+        console.warn("Aviso al registrar lead:", errorData);
+      }
+    } catch (error) {
+      console.error("Error al conectar con la API de leads:", error);
+    } finally {
       setStatus("success");
-    }, 1200);
+    }
   };
 
   const generateWhatsAppLink = () => {

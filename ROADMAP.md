@@ -70,3 +70,8 @@ Documento de visión técnica, arquitectura visual y hoja de ruta para la constr
   - Menú desplegable táctil responsive para dispositivos móviles con navegación suave por anclas.
 - [x] **Botón Flotante de WhatsApp (FAB)**:
   - Acceso persistente con micro-animación tipo radar a WhatsApp oficial (+54 9 3493 50-6346).
+- [x] **Backend de Captura de Leads y Notificaciones por Email (`/api/lead`)**:
+  - Endpoint seguro en Next.js App Router conectado al `LeadModal`.
+  - Integración con Resend para envío de emails formateados en HTML con estética Punto Litoral.
+  - Modo simulación / registro en consola con cero pérdida de prospectos si no hay API key configurada.
+  - Plantilla de variables de entorno documentada en `.env.example`.
