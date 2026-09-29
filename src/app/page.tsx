@@ -31,6 +31,8 @@ import SplineViewer from "@/components/SplineViewer";
 import BrandLogo from "@/components/BrandLogo";
 import LeadModal from "@/components/LeadModal";
 import FaqAccordion from "@/components/FaqAccordion";
+import Navbar from "@/components/Navbar";
+import WhatsAppFab from "@/components/WhatsAppFab";
 
 // Enlaces de contacto configurables (WhatsApp y Diagnóstico)
 const WHATSAPP_NUMBER = "5493493506346"; // Teléfono oficial de Punto Litoral: +54 9 3493 50-6346
@@ -55,68 +57,14 @@ export default function Home() {
         <div className="absolute top-[60%] -right-[15%] w-[550px] h-[550px] bg-[#1c5c8a]/20 blur-[150px] rounded-full" />
       </div>
 
-      {/* Navigation Header */}
-      <header className="sticky top-0 z-40 w-full border-b border-[#0c1f3d]/80 bg-[#050b14]/85 backdrop-blur-xl">
-        <div className="max-w-7xl mx-auto flex items-center justify-between px-6 py-3.5">
-          <motion.div
-            initial={{ opacity: 0, x: -20 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.6 }}
-            className="flex items-center gap-3.5 cursor-pointer group"
-          >
-            {/* High-contrast Brand Logo */}
-            <BrandLogo size="md" variant="glow" />
-
-            <div className="flex flex-col">
-              <span className="text-base font-bold tracking-wider uppercase text-white group-hover:text-[#f8fafc] transition-colors leading-none">
-                Punto Litoral
-              </span>
-              <span className="text-[10px] font-mono text-[#1c5c8a] tracking-widest leading-tight mt-1 uppercase font-semibold">
-                Productividad & Automatización
-              </span>
-            </div>
-          </motion.div>
-
-          <nav className="hidden lg:flex items-center gap-7 text-sm text-[#f8fafc]/70 font-medium">
-            <a href="#soluciones" className="hover:text-white transition-colors">
-              Soluciones
-            </a>
-            <a href="#por-que-nosotros" className="hover:text-white transition-colors">
-              Pilares
-            </a>
-            <a href="#metodologia" className="hover:text-white transition-colors">
-              Metodología
-            </a>
-            <a href="#comparativa" className="hover:text-white transition-colors">
-              Comparativa
-            </a>
-            <a href="#faq" className="hover:text-white transition-colors">
-              Preguntas
-            </a>
-            <a href="#contacto" className="hover:text-white transition-colors">
-              Contacto
-            </a>
-          </nav>
-
-          <motion.div
-            initial={{ opacity: 0, x: 20 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.6 }}
-            className="flex items-center gap-3"
-          >
-            <button
-              onClick={() => setIsModalOpen(true)}
-              className="text-xs uppercase tracking-wider font-mono px-4 py-2 rounded-full border border-[#1c5c8a]/50 bg-[#0c1f3d]/70 hover:bg-[#1c5c8a]/30 hover:border-[#1c5c8a] transition-all text-[#f8fafc] shadow-[0_0_15px_rgba(28,92,138,0.25)] flex items-center gap-2 cursor-pointer"
-            >
-              <Calendar className="w-3.5 h-3.5 text-[#3a8ec4]" />
-              <span>Agendar Diagnóstico</span>
-            </button>
-          </motion.div>
-        </div>
-      </header>
+      {/* Floating Island Navbar */}
+      <Navbar
+        onOpenModal={() => setIsModalOpen(true)}
+        whatsappLink={WHATSAPP_LINK}
+      />
 
       {/* Hero Section */}
-      <main className="relative flex flex-col items-center justify-center pt-20 pb-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+      <main className="relative flex flex-col items-center justify-center pt-28 sm:pt-36 pb-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
         {/* Subtle glowing badge */}
         <motion.div
           initial={{ opacity: 0, y: -20 }}
@@ -1243,6 +1191,9 @@ export default function Home() {
           </div>
         </div>
       </footer>
+
+      {/* Floating WhatsApp Action Button */}
+      <WhatsAppFab whatsappLink={WHATSAPP_LINK} />
 
       {/* Lead Modal */}
       <LeadModal

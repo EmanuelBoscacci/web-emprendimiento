@@ -65,5 +65,8 @@ Documento de visión técnica, arquitectura visual y hoja de ruta para la constr
 - [x] **Sección de Preguntas Frecuentes (FAQ Accordion)**:
   - 6 preguntas estratégicas sobre adopción de herramientas, tiempos, curva técnica, presencial/remoto y seguridad.
   - Componente `FaqAccordion.tsx` interactivo con Framer Motion y botón de consulta directa por WhatsApp.
-- [ ] **Navbar Flotante Fija (Floating Island Navbar)**:
-  - Diseño tipo isla anclada con `backdrop-blur` e indicadores de sección activa.
+- [x] **Navbar Flotante Fija (Floating Island Navbar)**:
+  - Diseño tipo isla suspendida con `backdrop-blur-2xl`, borde reactivo al scroll y píldora animada para la sección activa.
+  - Menú desplegable táctil responsive para dispositivos móviles con navegación suave por anclas.
+- [x] **Botón Flotante de WhatsApp (FAB)**:
+  - Acceso persistente con micro-animación tipo radar a WhatsApp oficial (+54 9 3493 50-6346).
