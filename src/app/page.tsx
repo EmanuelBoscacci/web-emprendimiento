@@ -45,7 +45,7 @@ export default function Home() {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   return (
-    <div className="relative min-h-screen w-full overflow-hidden bg-[#050b14] text-[#f8fafc] selection:bg-[#1c5c8a]/40 selection:text-white">
+    <div className="relative min-h-screen w-full overflow-hidden bg-transparent text-[#f8fafc] selection:bg-[#1c5c8a]/40 selection:text-white">
       {/* Background ambient light & grid patterns */}
       <div className="pointer-events-none absolute inset-0 -z-10">
         {/* Subtle dot matrix */}

@@ -75,3 +75,7 @@ Documento de visión técnica, arquitectura visual y hoja de ruta para la constr
   - Integración con Resend para envío de emails formateados en HTML con estética Punto Litoral.
   - Modo simulación / registro en consola con cero pérdida de prospectos si no hay API key configurada.
   - Plantilla de variables de entorno documentada en `.env.example`.
+- [x] **Fondo Interactivo "Río de Datos" (`DataRiverCanvas.tsx`)**:
+  - Canvas 2D acelerado por hardware con 4 hebras sinusoidales entrelazadas y partículas de datos bioluminiscentes.
+  - Reactividad al scroll: aceleración fluida del caudal y oscilaciones con amortiguación suave.
+  - Integración full-screen en `layout.tsx` con soporte para DPR y optimización móvil.
